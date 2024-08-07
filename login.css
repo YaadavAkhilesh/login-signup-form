@@ -1,0 +1,78 @@
+body {
+    background: linear-gradient(135deg,#786281, #07000f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    background: linear-gradient(135deg, #070608, #b155d6);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.card-body {
+    padding: 30px;
+}
+
+/* For both Email and Password's Div Tag */
+.input-group-prepend{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.email-icon{
+    position: absolute;
+    z-index: 1;
+    height: 22px;
+    width: 10%;
+    padding-left: 5px;
+}
+
+/* For both Email and Password's Div Tag */
+.input-group-prepend > input{
+    padding-left: 48px;
+}
+
+.password-icon{
+    position: absolute;
+    z-index: 1;
+    height: 24px;
+    width: 10%;
+    padding-left: 5px;
+}
+
+#toggle-password-icon{
+    position: absolute;
+    z-index: 1;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-45%);
+    height: 30px;
+    width: 25px;
+    cursor: pointer;
+}
+
+#eye-close-icon{
+    display: none;
+}
+
+.btn-primary {
+    background-color: #5319bf;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #4207a0;
+}
+
+
+#email-error, #password-error{
+    color: red;
+}

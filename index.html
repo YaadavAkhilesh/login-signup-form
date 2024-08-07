@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="registration.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card" id="card">
+                    <div class="card-body">
+                        <h2 class="card-title text-center">Register</h2>
+                        <form id="registrationForm" method="post">
+
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name">
+                            </div>
+                            <div class="form-group" name="user">
+                                <label>Who are You : </label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="userType" id="freelancer" value="Freelancer">
+                                    <label class="form-check-label" for="freelancer">Freelancer</label>
+                                </div>
+                                <div class="form-check form-check-inline"> 
+                                    <input class="form-check-input" type="radio" name="userType" id="client" value="Client">
+                                    <label class="form-check-label" for="client">Client</label>
+                                </div>
+                            </div>
+        
+
+                            <div id="freelancerFields" class="hidden">
+                                <div class="form-group">
+                                    <label for="age">Age</label>
+                                    <input type="number" class="form-control" id="age" name="age" placeholder="Age">
+                                </div>
+                                <div class="form-group">
+                                    <label for="field">Field + Language Specification</label>
+                                    <input type="text" class="form-control" id="field" name="field" placeholder="Field + Language Specification">
+                                </div>
+                                <div class="form-group">
+                                    <label for="technology">Technology Specification</label>
+                                    <input type="text" class="form-control" id="technology" name="technology" placeholder="Technology Specification">
+                                </div>
+                                <div class="form-group">
+                                    <label for="degree">Degree / Certification</label>
+                                    <input type="text" class="form-control" id="degree" name="degree" placeholder="Degree / Certification">
+                                </div>
+                                <div class="form-group">
+                                    <label for="experience">Experience / Internship</label>
+                                    <input type="text" class="form-control" id="experience" name="experience" placeholder="Experience / Internship">
+                                </div>
+                                <div class="form-group">
+                                    <label for="countryFreelancer">Country</label>
+                                    <input type="text" class="form-control" id="countryFreelancer" name="countryFreelancer" placeholder="Country">
+                                </div>
+                            </div>
+        
+
+                            <div id="clientFields" class="hidden">
+                                <div class="form-group">
+                                    <label for="services">Which type of Services</label>
+                                    <select class="form-control" id="services" name="services">
+                                        <option>SaaS</option>
+                                        <option>PaaS</option>
+                                        <option>IaaS</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="countryClient">Country - Address</label>
+                                    <input type="text" class="form-control" id="countryClient" name="countryClient" placeholder="Country - Address">
+                                </div>
+                            </div>
+        
+
+
+                            <div class="form-group">
+                                <label for="contactEmail">Email</label>
+                                <input type="email" class="form-control" id="contactEmail" name="contactEmail" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactPhone">Phone number</label>
+                                <input type="tel" class="form-control" id="contactPhone" name="contactPhone" placeholder="Phone number">
+                            </div>
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Create Password</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                                <span class="toggle-password-icon" id="toggle-password-icon">
+                                    <svg id="eye-open-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M21.83 11.442C21.653 11.179 17.441 5 12 5s-9.653 6.179-9.83 6.442L1.8 12l.374.558C2.347 12.821 6.559 19 12 19s9.653-6.179 9.83-6.442L22.2 12zM12 17c-3.531 0-6.664-3.59-7.758-5C5.336 10.59 8.469 7 12 7s6.664 3.59 7.758 5c-1.094 1.41-4.227 5-7.758 5z"/><path d="M12 8a4 4 0 1 0 4 4 4 4 0 0 0-4-4zm0 6a2 2 0 1 1 2-2 2 2 0 0 1-2 2z"/></svg>
+                                    <svg id="eye-close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M21.83 11.442A19.711 19.711 0 0 0 18.018 7.4l3.689-3.689-1.414-1.418-3.966 3.966A8.774 8.774 0 0 0 12 5c-5.441 0-9.653 6.179-9.83 6.442L1.8 12l.374.558A19.711 19.711 0 0 0 5.982 16.6l-3.689 3.693 1.414 1.414 3.966-3.966A8.774 8.774 0 0 0 12 19c5.441 0 9.653-6.179 9.83-6.442L22.2 12zM4.242 12C5.336 10.59 8.469 7 12 7a6.47 6.47 0 0 1 2.853.733l-.834.834A3.947 3.947 0 0 0 12 8a4 4 0 0 0-4 4 3.947 3.947 0 0 0 .567 2.019l-1.16 1.16A17.993 17.993 0 0 1 4.242 12zM14 12a2 2 0 0 1-2 2 1.96 1.96 0 0 1-.511-.075l2.436-2.436A1.96 1.96 0 0 1 14 12zm-4 0a2 2 0 0 1 2-2 1.96 1.96 0 0 1 .511.075l-2.436 2.436A1.96 1.96 0 0 1 10 12zm2 5a6.47 6.47 0 0 1-2.853-.733l.834-.834A3.947 3.947 0 0 0 12 16a4 4 0 0 0 4-4 3.947 3.947 0 0 0-.567-2.019l1.16-1.16A17.993 17.993 0 0 1 19.758 12c-1.094 1.41-4.227 5-7.758 5z"/></svg>
+                                </span>
+                                
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">Re-enter Password</label>
+                                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
+                                <span class="toggle-password-icon" id="toggle-password-icon-reenter">
+                                    <svg id="eye-open-icon-reenter" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M21.83 11.442C21.653 11.179 17.441 5 12 5s-9.653 6.179-9.83 6.442L1.8 12l.374.558C2.347 12.821 6.559 19 12 19s9.653-6.179 9.83-6.442L22.2 12zM12 17c-3.531 0-6.664-3.59-7.758-5C5.336 10.59 8.469 7 12 7s6.664 3.59 7.758 5c-1.094 1.41-4.227 5-7.758 5z"/><path d="M12 8a4 4 0 1 0 4 4 4 4 0 0 0-4-4zm0 6a2 2 0 1 1 2-2 2 2 0 0 1-2 2z"/></svg>
+                                    <svg id="eye-close-icon-reenter" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M21.83 11.442A19.711 19.711 0 0 0 18.018 7.4l3.689-3.689-1.414-1.418-3.966 3.966A8.774 8.774 0 0 0 12 5c-5.441 0-9.653 6.179-9.83 6.442L1.8 12l.374.558A19.711 19.711 0 0 0 5.982 16.6l-3.689 3.693 1.414 1.414 3.966-3.966A8.774 8.774 0 0 0 12 19c5.441 0 9.653-6.179 9.83-6.442L22.2 12zM4.242 12C5.336 10.59 8.469 7 12 7a6.47 6.47 0 0 1 2.853.733l-.834.834A3.947 3.947 0 0 0 12 8a4 4 0 0 0-4 4 3.947 3.947 0 0 0 .567 2.019l-1.16 1.16A17.993 17.993 0 0 1 4.242 12zM14 12a2 2 0 0 1-2 2 1.96 1.96 0 0 1-.511-.075l2.436-2.436A1.96 1.96 0 0 1 14 12zm-4 0a2 2 0 0 1 2-2 1.96 1.96 0 0 1 .511.075l-2.436 2.436A1.96 1.96 0 0 1 10 12zm2 5a6.47 6.47 0 0 1-2.853-.733l.834-.834A3.947 3.947 0 0 0 12 16a4 4 0 0 0 4-4 3.947 3.947 0 0 0-.567-2.019l1.16-1.16A17.993 17.993 0 0 1 19.758 12c-1.094 1.41-4.227 5-7.758 5z"/></svg>
+                                </span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                        </form>
+                        <p class="text-center mt-3">Already have an account? <a href="login.html">Login</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
+    <script src="registration.js"></script>
+</body>
+
+</html>

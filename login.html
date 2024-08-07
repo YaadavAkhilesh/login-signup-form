@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title text-center">Login</h2>
+                        <form id="loginForm" method="post">
+
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <div class="input-group-prepend">
+                                    <svg class="email-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="black" height="20" width="20"><path d="m31.59 11.19-15-11a1 1 0 0 0-1.18 0l-15 11A1 1 0 0 0 0 12v17a3 3 0 0 0 3 3h26a3 3 0 0 0 3-3V12a1 1 0 0 0-.41-.81zM16 2.24l13.2 9.68L16 19.83 2.8 11.92zM2 28.59V13.77l9.26 5.56zM3.41 30 13 20.38l2.46 1.47a1 1 0 0 0 1 0L19 20.38 28.59 30zM30 28.59l-9.26-9.26L30 13.77z" data-name="23-Email" /></svg>
+                                    <input type="email" class="form-control" id="email" placeholder="E-mail">
+                                </div>
+                                <span id="email-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <div class="input-group-prepend">
+                                    <svg class="password-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 50 50" fill="black"><path d="M42,21H8c-1.654,0-3,1.346-3,3v23c0,1.654,1.346,3,3,3h34c1.654,0,3-1.346,3-3V24C45,22.346,43.654,21,42,21z M13,38 c-1.105,0-2-0.895-2-2c0-1.105,0.895-2,2-2s2,0.895,2,2C15,37.105,14.105,38,13,38z M21,38c-1.105,0-2-0.895-2-2 c0-1.105,0.895-2,2-2s2,0.895,2,2C23,37.105,22.105,38,21,38z M29,38c-1.105,0-2-0.895-2-2c0-1.105,0.895-2,2-2s2,0.895,2,2 C31,37.105,30.105,38,29,38z M37,38c-1.105,0-2-0.895-2-2c0-1.105,0.895-2,2-2s2,0.895,2,2C39,37.105,38.105,38,37,38z M12,19v-4.01 C12,7.827,17.827,2,24.99,2h0.02C32.173,2,38,7.827,38,14.99V19h-2v-4.01C36,8.93,31.069,4,25.01,4h-0.02C18.931,4,14,8.93,14,14.99 V19H12z"></path></svg>
+                                    <input type="password" class="form-control" id="password" placeholder="Password">
+                                    
+                                    <span id="toggle-password-icon">
+                                        <svg id="eye-open-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M21.83 11.442C21.653 11.179 17.441 5 12 5s-9.653 6.179-9.83 6.442L1.8 12l.374.558C2.347 12.821 6.559 19 12 19s9.653-6.179 9.83-6.442L22.2 12zM12 17c-3.531 0-6.664-3.59-7.758-5C5.336 10.59 8.469 7 12 7s6.664 3.59 7.758 5c-1.094 1.41-4.227 5-7.758 5z"/><path d="M12 8a4 4 0 1 0 4 4 4 4 0 0 0-4-4zm0 6a2 2 0 1 1 2-2 2 2 0 0 1-2 2z"/></svg>
+                                        <svg id="eye-close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M21.83 11.442A19.711 19.711 0 0 0 18.018 7.4l3.689-3.689-1.414-1.418-3.966 3.966A8.774 8.774 0 0 0 12 5c-5.441 0-9.653 6.179-9.83 6.442L1.8 12l.374.558A19.711 19.711 0 0 0 5.982 16.6l-3.689 3.693 1.414 1.414 3.966-3.966A8.774 8.774 0 0 0 12 19c5.441 0 9.653-6.179 9.83-6.442L22.2 12zM4.242 12C5.336 10.59 8.469 7 12 7a6.47 6.47 0 0 1 2.853.733l-.834.834A3.947 3.947 0 0 0 12 8a4 4 0 0 0-4 4 3.947 3.947 0 0 0 .567 2.019l-1.16 1.16A17.993 17.993 0 0 1 4.242 12zM14 12a2 2 0 0 1-2 2 1.96 1.96 0 0 1-.511-.075l2.436-2.436A1.96 1.96 0 0 1 14 12zm-4 0a2 2 0 0 1 2-2 1.96 1.96 0 0 1 .511.075l-2.436 2.436A1.96 1.96 0 0 1 10 12zm2 5a6.47 6.47 0 0 1-2.853-.733l.834-.834A3.947 3.947 0 0 0 12 16a4 4 0 0 0 4-4 3.947 3.947 0 0 0-.567-2.019l1.16-1.16A17.993 17.993 0 0 1 19.758 12c-1.094 1.41-4.227 5-7.758 5z"/></svg>
+                                    </span>
+                                </div>
+                                <span id="password-error"></span>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">Remember me</label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block mt-3">Login</button>
+                            <p class="text-center mt-3">Don't have an account? <a href="index.html">Sign up</a>
+                            </p>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+
+</html>
